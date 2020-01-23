@@ -1,0 +1,172 @@
+{{ define "main" }}
+
+<!-- banner -->
+{{ with .Site.Data.homepage.banner }}
+<section class="section-banner d-flex align-items-center"
+         style="background-attachment: fixed;background-color:white;background-image: url(images/TSCIRCLE_Final_Logo_Circle_Only.svg);background-position: 388px -376px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mr-auto">
+                <div class="banner-content">
+                    <span>version 0.0.29 </span>
+                    <h1 class="mt-3">mailcircle</h1>
+                    <h2 class="mb-5">Easily create and send e-mail transaction templates </h2>
+
+                    <a href="{{ "documentation" | absURL }}" class="btn btn-hero btn-rounded">Documentation</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+<!-- /banner -->
+
+<!-- counter -->
+{{ if .Site.Data.homepage.counter.enable }}
+{{ with .Site.Data.homepage.counter }}
+<section class="overflow-hidden counter-wrapper pt-4 pb-5">
+    <div class="container">
+        <div class="counter-inner">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="counter-stat">
+                        <h2 class="font-weight-light">It's about transaction templates</h2>
+                    </div>
+                </div>
+                <div class="syotimer">
+                    <div class="syotimer__head"></div>
+                    <div class="syotimer__body">
+                        <div class="syotimer-cell syotimer-cell_type_hour">
+                            <div class="syotimer-cell__value" style="opacity: 1;">Drag 'n' Drop</div>
+                            <div class="syotimer-cell__unit text-primary"></div>
+                        </div>
+                        <div class="syotimer-cell syotimer-cell_type_hour">
+                            <div class="syotimer-cell__value" style="opacity: 1;"><span class="text-primary">//</span> i18n</div>
+                            <div class="syotimer-cell__unit text-primary"></div>
+                        </div>
+                        <div class="syotimer-cell syotimer-cell_type_hour">
+                            <div class="syotimer-cell__value" style="opacity: 1;"><span class="text-primary">//</span> API</div>
+                            <div class="syotimer-cell__unit text-primary"></div>
+                        </div>
+                    </div>
+                    <div class="syotimer__footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- counter -->
+
+<!-- feature -->
+{{ if .Site.Data.about.feature.enable }}
+{{ with .Site.Data.about.feature }}
+<section class="section cta-wrap">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="p-5 box-shadow">
+                            <h4 class="mt-3 mb-3 text-black">Model</h4>
+                            <p class="text-black">
+                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                                ipsum
+                                <a href="{{ .link | absURL }}" class="text-primary">.Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="p-5 box-shadow">
+                            <h4 class="mt-3 mb-3 text-black">CRUD Controller</h4>
+                            <p class="text-black">
+                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                                ipsum
+                                <a href="{{ .link | absURL }}" class="text-primary">.Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="p-5 box-shadow">
+                            <h4 class="mt-3 mb-3 text-black">Queues</h4>
+                            <p class="text-black">
+                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                                ipsum
+                                <a href="{{ .link | absURL }}" class="text-primary">.Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="p-5 box-shadow">
+                            <h4 class="mt-3 mb-3 text-black">State Machine</h4>
+                            <p class="text-black">
+                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                                ipsum
+                                <a href="{{ .link | absURL }}" class="text-primary">.Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="p-5 box-shadow">
+                            <h4 class="mt-3 mb-3 text-black">RDS Serverless</h4>
+                            <p class="text-black">
+                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                                ipsum
+                                <a href="{{ .link | absURL }}" class="text-primary">.Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="p-5 box-shadow">
+                            <h4 class="mt-3 mb-3 text-black">CI/CD</h4>
+                            <p class="text-black">
+                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                                ipsum
+                                <a href="{{ .link | absURL }}" class="text-primary">.Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="p-5 box-shadow">
+                            <h4 class="mt-3 mb-3 text-black">IaaC</h4>
+                            <p class="text-black">
+                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                                ipsum
+                                <a href="{{ .link | absURL }}" class="text-primary">.Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="p-5 box-shadow">
+                            <h4 class="mt-3 mb-3 text-black">Local Env</h4>
+                            <p class="text-black">
+                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                                ipsum
+                                <a href="{{ .link | absURL }}" class="text-primary">.Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /feature -->
+
+
+{{ end }}

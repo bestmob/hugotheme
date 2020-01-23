@@ -1,0 +1,28 @@
+<div class="col-lg-3 pl-lg-5">
+    <div class="widget mb-5 mt-5 mt-lg-0">
+        <form action="{{ .Site.BaseURL }}/search">
+            <input id="search-query" name="s" type="search" class="form-control" placeholder="Search">
+        </form>
+    </div>
+
+    <div class="widget mb-5 list-item">
+        <ul class="list-unstyled">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.documentation }}
+                {{ if .HasChildren }}
+                    <li class="d-flex justify-content-between align-items-center">
+                        <ul class="list-unstyled">
+                            <h5>{{ .Name }}</h5>
+                            {{ range .Children }}
+                                {{ $active := in $currentPage.RelPermalink .URL }}
+                                <li class="ml-3 d-flex justify-content-between align-items-center" style="border-bottom:0px;">
+                                   <a class="{{ if $currentPage.IsMenuCurrent "documentation" . }}text-primary{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</div>
